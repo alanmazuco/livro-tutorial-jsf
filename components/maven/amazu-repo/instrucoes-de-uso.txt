@@ -1,0 +1,74 @@
+readme:
+
+Você tem duas opções para usar os recursos:
+1) Baixar o arquivo jar e copiar para dentro de uma pasta lib, e, em seguida, adicioná-lo na claspath
+2) Utilizar o recurso com o Maven, adicionando a biblioteca no arquivo pom.xam
+
+Para adicionar no pom. xml, proceda da seguinte forma:
+
+1) Adicione este repositório dentro do pom.xml.
+   Você deve fazê-lo imediatamente após o fechamento da tag profiles (</profiles>)
+   
+	<repositories>
+		<repository>
+			<id>amazu-repo</id>
+			<url>https://github.com/alanmazuco/livro-tutorial-jsf/tree/main/components/maven/</url>
+			<releases>
+				<checksumPolicy>warn</checksumPolicy>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>			
+		</repository>
+	</repositories>
+	
+2) Adicione as dependências abaixo, que você desejar usar:
+	
+	<dependency>
+		<groupId>amazu-repo</groupId>
+		<artifactId>all-themes</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>amazu-repo</groupId>
+		<artifactId>dialog</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>amazu-repo</groupId>
+		<artifactId>icons</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>amazu-repo</groupId>
+		<artifactId>manteer-menus</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>amazu-repo</groupId>
+		<artifactId>painel-controle</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>amazu-repo</groupId>
+		<artifactId>progressbar</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>amazu-repo</groupId>
+		<artifactId>pworld</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>amazu-repo</groupId>
+		<artifactId>upload</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+3) Não encorajo o aluno a proceder desta forma, pois todo o código-fonte dessas bibliotecas (exceto algumas não essenciais ao projeto) estão dentro do livro, e você, preferencialmente, deveria digitá-lo, para adquirir prática.
